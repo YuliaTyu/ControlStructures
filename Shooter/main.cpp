@@ -82,11 +82,40 @@ void main()
 	                     
 
 	//Написать программу, которая выводит на экран таблицу ASCII-символов по 16 в строке
-	for (int i = 0; i < 256; i++)
-	{
-		if (i % 16 == 0)cout << endl;
-		cout << (char)i;
-	}
+	//for (int i = 0; i < 256; i++)
+	//{
+	//	if (i % 16 == 0)cout << endl;
+	//	cout << (char)i;
+	//}
+	//cout << endl;
+
+	//int i = 15;
+	//int j = 7;
+	//while (i >= j)
+	//{
+	//	i = i - j;
+	//	cout << " yes \t";
+	//}
+	//cout << "noy \n";
+	//cout << endl;
+
+	//int j = 0;
+	//while (j < 7)
+	//{
+	//	j++;
+	//	cout << "gou \n";
+	//}
+	//cout << "stop\n";
+	//cout << endl;
+
 	
-	
+	//int j;
+	//do
+	//{
+	//	cin >> j;
+	//} while (j < 60);
+	//cout << "fire";
+	//cout << endl;
+
+
 }
