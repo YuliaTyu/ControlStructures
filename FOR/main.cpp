@@ -9,7 +9,7 @@ using namespace std;
 //#define STEPEN
 //#define PREDELNOE
 //#define CHUDO
-#define DOM
+//#define DOM
 
 
 
