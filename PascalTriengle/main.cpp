@@ -1,13 +1,13 @@
 ﻿#include <iostream>
 using namespace std;
-#define SPACE_BETWEEN 8
+#define SPACE_BETWEEN 8 // cout - задает ширину поля для выводимого значения 
 
 void main()
 {
 	setlocale(LC_ALL, "");
 	int h;
 	cout << "Введите высоту треугольника:"; cin >> h;
-	long long nf = 1;
+	long long nf = 1; 
 	cout.width(SPACE_BETWEEN / 2 * (h + 2));
 	cout << 1 << "\n";
 	for (int n = 1; n <= h; n++)

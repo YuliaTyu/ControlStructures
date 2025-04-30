@@ -9,8 +9,11 @@ using std::cout;
 //#define TRIANGLE4
 //#define ROMB
 //#define SUMMIN
-#define ZVEZDEZ
+//#define HARDCHESS
 //#define ROMB2
+//#define ROMB3
+
+
 
 
 void main()
@@ -21,21 +24,21 @@ void main()
 
 #ifdef SQUARE 
 
-	for (int i = 1; i <= n; i++)
+	for (int i = 0; i < n; i++) // вывод строки (количество n) 
 	{
-		for (int i = 1; i <= n; i++)
+		for (int i = 0; i < n; i++) // вывод строки!! (количество n)
 		{
-			cout << "*";
+			cout << "* ";
 		}
-		cout << endl;
+		cout << endl;// перенос строки n раз!!!! 
 	}
 	cout << endl;
 #endif 
 
 #ifdef TRIANGLE1
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)// вывод строки 
 	{
-		for (int j = 0; j <= i; j++)
+		for (int j = 0; j <= i; j++) // вывод столба
 		{
 			cout << "* ";
 		}
@@ -46,9 +49,9 @@ void main()
 
 #ifdef TRIANGLE2
 
-	for (int i = 0; i < n; i++)
+	for (int i = 0; i < n; i++)//2 пункт - повторяет вывод строки
 	{
-		for (int j = i; j < n; j++)
+		for (int j = i; j < n; j++) //1 пункт - формирует строку из*
 		{
 			cout << "* ";
 		}
@@ -107,9 +110,9 @@ void main()
 		for (int j = 0; j < n; j++)
 		{
 			//if ((i + j) % 2 == 0)cout << "+ ";else cout << "- ";
-			//if (i % 2 == j % 2) cout << "+ ";else cout << "- ";
-			//i % 2 == j % 2 ? cout << "+ " : cout << "- ";
-			cout << (i % 2 == j % 2 ? "+ " : "- ");
+			if (i % 2 == j % 2) cout << "+ ";else cout << "- ";
+			//if (i % 2 == j % 2 ? cout << "+ " : cout << "- ";
+			//cout << (i % 2 == j % 2 ? "+ " : "- ");
 		}
 		cout << endl;
 	}
@@ -118,33 +121,16 @@ void main()
 
 	// квадратики из звездочек - звездец
 
-#ifdef ZVEZDEZ
-	for (int i = 0; i < n; i++)
+#ifdef HARDCHESS
+	for (int i = 1; i <= n; i++)
 	{
-		for (int i = 0; i <= 5; i++)
+		for (int i = 0; i <= n; i++)
 		{
-			for (int j = 0; j <= 5; j++)
-			{
-				cout << " *";
-			}
-			for (int a = 0; a <= 5; a++)
-			{
-				cout << " h";
-			}
-			cout << endl;
+			for (int i = 1; i <= 1; i++)  cout << "* * * * *";
+			
+			for (int j = 1; j <= 1; j++)  cout << "h h h h h";
 		}
-		for (int i = 0; i <= 5; i++)
-		{
-			for (int j = 0; j <= 5; j++)
-			{
-				cout << " k";
-			}
-			for (int a = 0; a <= 5; a++)
-			{
-				cout << " l";
-			}
-			cout << endl;
-		}
+		cout << endl;
 	}
 	cout << endl;
 #endif
@@ -165,6 +151,23 @@ void main()
 		cout << endl;
 }
 #endif
+
+#ifdef ROMB 3
+
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = i; j < n; j++) cout << " "; cout << "/";
+		for (int j = 0; j < i; j++) cout << "  "; cout << "\\";
+		cout << endl;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0 - 1; j < i; j++) cout << " "; cout << "\\";
+		for (int j = i + 1; j < n; j++) cout << "  "; cout << "/";
+		cout << endl;
+	}
+	cout << endl;
+#endif // ROMB 3
 
 
 
