@@ -1,28 +1,28 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
 
 void main()
 {
 	setlocale(LC_ALL, "");
 		cout << "Palindrome" << endl;
-	int number; //число вводимое с клавиатуры
-	int revers = 0; //число записанное в обратном порядке
-	cout << "Введите число:"; cin >> number;
-	int buffer = number;// копия числа введенного с клавиатуры
+	int number; //С‡РёСЃР»Рѕ РІРІРѕРґРёРјРѕРµ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
+	int revers = 0; //С‡РёСЃР»Рѕ Р·Р°РїРёСЃР°РЅРЅРѕРµ РІ РѕР±СЂР°С‚РЅРѕРј РїРѕСЂСЏРґРєРµ
+	cout << "Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:"; cin >> number;
+	int buffer = number;// РєРѕРїРёСЏ С‡РёСЃР»Р° РІРІРµРґРµРЅРЅРѕРіРѕ СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
 	while (buffer)
 	{
 		revers *= 10;
-		revers += buffer % 10; //получаем младший разряд числа
-		buffer /= 10;// убираем младший разряд
+		revers += buffer % 10; //РїРѕР»СѓС‡Р°РµРј РјР»Р°РґС€РёР№ СЂР°Р·СЂСЏРґ С‡РёСЃР»Р°
+		buffer /= 10;// СѓР±РёСЂР°РµРј РјР»Р°РґС€РёР№ СЂР°Р·СЂСЏРґ
 	}
 	cout << number << endl;
 	cout << revers << endl;
 	if (revers == number)
 	{
-		cout << "Палиндром" << endl;
+		cout << "РџР°Р»РёРЅРґСЂРѕРј" << endl;
 	}
 	else
 	{
-		cout << "Обычное число" << endl;
+		cout << "РћР±С‹С‡РЅРѕРµ С‡РёСЃР»Рѕ" << endl;
 	}
 }
