@@ -1,16 +1,16 @@
-#include<iostream>
+п»ї#include<iostream>
 using namespace std;
-//создаем МАКРОС (макроопределение)
-       //НА ЧТО ЗАМЕНИТЬ   ЧТО ЗАМЕНИТЬ:
-#define UPPER_LEFT_ANGLE  (char)218 //верх лев
-#define UPPER_RIGHT_ANGLE (char)191 //верх прав
-#define LOWER_LEFT_ANGLE  (char)192 //низ лев
-#define LOWER_RIGHT_ANGLE (char)217 // низ прав 
+//СЃРѕР·РґР°РµРј РњРђРљР РћРЎ (РјР°РєСЂРѕРѕРїСЂРµРґРµР»РµРЅРёРµ)
+       //РќРђ Р§РўРћ Р—РђРњР•РќРРўР¬   Р§РўРћ Р—РђРњР•РќРРўР¬:
+#define UPPER_LEFT_ANGLE  (char)218 //РІРµСЂС… Р»РµРІ
+#define UPPER_RIGHT_ANGLE (char)191 //РІРµСЂС… РїСЂР°РІ
+#define LOWER_LEFT_ANGLE  (char)192 //РЅРёР· Р»РµРІ
+#define LOWER_RIGHT_ANGLE (char)217 // РЅРёР· РїСЂР°РІ 
 #define HORIZONTAL_LINE   (char)196
 #define VERTIKAL_LINE     (char)179
 //#define WHITE_BOX         (char)219
-#define WHITE_BOX         "\xDB\xDB" //escs-последовательность дубль 
-#define BLACK_BOX         "  "       //дубль
+#define WHITE_BOX         "\xDB\xDB" //escs-РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚СЊ РґСѓР±Р»СЊ 
+#define BLACK_BOX         "  "       //РґСѓР±Р»СЊ
 //#define BLACK_BOX         (char)32
 
 
@@ -19,18 +19,18 @@ using namespace std;
 void main()
 {
 #ifdef ASCII
-	for (int i = 176; i < 224; i++) //установлен диапозон нужных сиволов таблицы (0 - 255)
-	{                               //выписываем define кодов
-		//if (i % 16 == 0)cout << endl;      прим. i % 16 == 0 - i- кратно 16
+	for (int i = 176; i < 224; i++) //СѓСЃС‚Р°РЅРѕРІР»РµРЅ РґРёР°РїРѕР·РѕРЅ РЅСѓР¶РЅС‹С… СЃРёРІРѕР»РѕРІ С‚Р°Р±Р»РёС†С‹ (0 - 255)
+	{                               //РІС‹РїРёСЃС‹РІР°РµРј define РєРѕРґРѕРІ
+		//if (i % 16 == 0)cout << endl;      РїСЂРёРј. i % 16 == 0 - i- РєСЂР°С‚РЅРѕ 16
 		cout << i << "\t" << (char)i << endl;
 	}
 #endif
 
-	setlocale(LC_ALL, "");//УСТАНАВЛВАЕТ РУССКУЮ КОДИРОВКУ
+	setlocale(LC_ALL, "");//РЈРЎРўРђРќРђР’Р›Р’РђР•Рў Р РЈРЎРЎРљРЈР® РљРћР”РР РћР’РљРЈ
 	int n;
-	cout << "Введите размер доски:"; cin >> n;
-	n++; //компенсация рамки +1 
-	setlocale(LC_ALL, "C");// УСТАНАВЛВАЕТ КОДИРОВКУ ПО УМОЛЧАНИЮ
+	cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РґРѕСЃРєРё:"; cin >> n;
+	n++; //РєРѕРјРїРµРЅСЃР°С†РёСЏ СЂР°РјРєРё +1 
+	setlocale(LC_ALL, "C");// РЈРЎРўРђРќРђР’Р›Р’РђР•Рў РљРћР”РР РћР’РљРЈ РџРћ РЈРњРћР›Р§РђРќРР®
 	for (int i = 0; i <= n; i++)
 	{
 		for (int j = 0; j <= n; j++)
@@ -41,7 +41,7 @@ void main()
 			else if (i == n && j == n) cout << LOWER_RIGHT_ANGLE;
 			else if (i == 0 || i == n) cout << HORIZONTAL_LINE << HORIZONTAL_LINE;
 			else if (j == 0 || j == n) cout << VERTIKAL_LINE;
-			else cout << (i % 2 == j % 2 ? WHITE_BOX : BLACK_BOX); //если четность i и j совпадают выводим белый : (в протвноим случае) выводим черный
+			else cout << (i % 2 == j % 2 ? WHITE_BOX : BLACK_BOX); //РµСЃР»Рё С‡РµС‚РЅРѕСЃС‚СЊ i Рё j СЃРѕРІРїР°РґР°СЋС‚ РІС‹РІРѕРґРёРј Р±РµР»С‹Р№ : (РІ РїСЂРѕС‚РІРЅРѕРёРј СЃР»СѓС‡Р°Рµ) РІС‹РІРѕРґРёРј С‡РµСЂРЅС‹Р№
 
 		}
 		cout << endl;
